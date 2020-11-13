@@ -1,0 +1,93 @@
+{
+    "movie": [
+        {
+            "id": 1,
+            "title": "Batman Begins",
+            "year": "2005",
+            "description": "After training with his mentor, Batman begins his fight to free crime-ridden Gotham City from corruption.",
+            "directors": [
+                "Christopher Nolan"
+            ],
+            "writers": [
+                "Christopher Nolan"
+            ],
+            "stars": [
+                {
+                    "actor": "Christian Bale",
+                    "character": "Bruce Wayne / Batman"
+                },
+                {
+                    "actor": "Michael Caine",
+                    "character": "Alfred"
+                },
+                {
+                    "actor": "Ducard",
+                    "character": "Liam Neeson"
+                },
+                {
+                    "actor": "Katie Holmes",
+                    "character": "Rachel Dawes"
+                }
+            ]
+        },
+        {
+            "id": 2,
+            "title": "Harry Potter and the Sorcerer's Stone ",
+            "year": "2001",
+            "description": "An orphaned boy enrolls in a school of wizardry, where he learns the truth about himself, his family and the terrible evil that haunts the magical world.",
+            "directors": [
+                "Chris Columbus"
+            ],
+            "writers": [
+                "J.K. Rowling",
+                "Steve Kloves"
+            ],
+            "stars": [
+                {
+                    "actor": "Daniel Radcliffe",
+                    "character": "Harry Potter"
+                },
+                {
+                    "actor": "Rupert Grint",
+                    "character": "Ron Weasley"
+                },
+                {
+                    "actor": "Emma Watson",
+                    "character": "Hermione Granger"
+                }
+            ]
+        },
+        {
+            "id": 3,
+            "title": "The Matrix",
+            "year": "1999",
+            "description": "When a beautiful stranger leads computer hacker Neo to a forbidding underworld, he discovers the shocking truth--the life he knows is the elaborate deception of an evil cyber-intelligence.",
+            "directors": [
+                "Lana Wachowski",
+                "Lilly Wachowski"
+            ],
+            "writers": [
+                "Lana Wachowski",
+                "Lilly Wachowski"
+            ],
+            "stars": [
+                {
+                    "actor": "Keanu Reeves",
+                    "character": "Neo"
+                },
+                {
+                    "actor": "Laurence Fishburne",
+                    "character": "Morpheus"
+                },
+                {
+                    "actor": "Carrie-Anne Moss",
+                    "character": "Trinity"
+                },
+                {
+                    "actor": "Hugo Weaving",
+                    "character": "Agent Smith"
+                }
+            ]
+        }
+    ]
+}
