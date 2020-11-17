@@ -5,12 +5,13 @@ class ApiService {
     this.baseUrl = baseUrl;
   }
 
-  async get(requestParams) {
-    const queryString = requestParams.join('/');
+  async get(routeParams, queryParams) {
+    const route = routeParams.join('/');
+    const query = queryParams.join('&');
 
     let response = null;
 
-    const url = `${this.baseUrl}/${queryString}`;
+    const url = `${this.baseUrl}/${route}?${query}`;
 
     try {
       response = await fetch(url);
@@ -19,9 +20,12 @@ class ApiService {
       throw new Error(err);
     }
 
-    const movieData = await response.json();
+    const data = await response.json();
 
-    return movieData;
+    return {
+      data,
+      headers: response.headers
+    }
   }
 }
 
