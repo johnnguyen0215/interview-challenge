@@ -1,0 +1,31 @@
+.movie {
+  color: #000;
+  font-size: 12pt;
+  padding: 1rem;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+}
+
+.movie:not(:first-child) {
+  margin-top: 2rem;
+}
+
+.movie:hover {
+  box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
+  cursor: pointer;
+}
+
+.movie-title {
+  display: inline-block;
+}
+
+.label {
+  font-weight: 600;
+}
+
+.MuiAccordionSummary-content {
+  flex-wrap: wrap;
+}
+
+.MuiAccordionSummary-content .label {
+  margin-right: 0.3rem;
+}

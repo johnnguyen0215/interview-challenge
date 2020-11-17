@@ -1,24 +1,46 @@
-import logo from './logo.svg';
+import MovieList from './components/movieList/movieList'
 import './App.css';
+import { Container, CircularProgress } from '@material-ui/core';
+import { useState, useEffect } from 'react';
+import ApiService from './services/api';
+import environment from './environment/environment';
 
 function App() {
+  const [movies, setMovies] = useState([])
+  const [isLoading, setIsLoading] = useState(true);
+
+  useEffect(() => {
+    let mounted = true;
+
+    const api = new ApiService(environment.apiUrl);
+
+    const fetchData = async () => {
+      const movies = await api.get(['movie']);
+
+      if (mounted) {
+        setMovies(movies);
+        setIsLoading(false);
+      }
+    }
+
+    fetchData();
+
+    return () => { mounted = false };
+  }, []);
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Container>
+      <div className="app-heading">
+        <h1>Movies</h1>
+      </div>
+      {
+        isLoading ?
+          <div className="progress-container">
+            <CircularProgress size={'4rem'} />
+          </div>
+        : <MovieList movies={movies}/>
+      }
+    </Container>
   );
 }
 
