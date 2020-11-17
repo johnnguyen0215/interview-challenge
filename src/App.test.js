@@ -8,12 +8,12 @@ describe('App', () => {
   let getSpy = jest.fn();
 
   beforeEach(() => {
-    getSpy = jest.spyOn(ApiService.prototype, 'get').mockReturnValue(dbJson.movie)
+    getSpy = jest.spyOn(ApiService.prototype, 'get').mockReturnValue(dbJson.movie);
   });
 
   afterEach(() => {
     jest.clearAllMocks();
-  })
+  });
 
   test('renders Movie heading', async () => {
     await act(async () => {
@@ -40,7 +40,7 @@ describe('App', () => {
       await waitFor(() => {
         expect(loadingSpinner).not.toBeInTheDocument();
       });
-    })
+    });
   })
 
   test('should make a call to the api get method', async () => {
