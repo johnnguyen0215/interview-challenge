@@ -29,7 +29,6 @@ function App() {
 
     if (!totalMovies.current) {
       totalMovies.current = response?.headers.get('X-Total-Count');
-      console.log(totalMovies.current);
     }
 
     const movies = response?.data;
